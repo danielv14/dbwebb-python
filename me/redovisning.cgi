@@ -29,6 +29,7 @@ content = """<!doctype html>
 <style>
 div.wrapper {
 	width:960px;
+	font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;
 	margin-top: 20px;
 	margin-left: auto;
 	margin-right: auto;
