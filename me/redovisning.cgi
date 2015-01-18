@@ -28,9 +28,18 @@ content = """<!doctype html>
 <meta charset="utf-8">
 <style>
 div.wrapper {
-	width:600px;
+	width:960px;
+	margin-top: 20px;
 	margin-left: auto;
 	margin-right: auto;
+	line-height: 1.2;
+	-moz-box-shadow: 1px 1px 3px #000000;
+	-webkit-box-shadow: 1px 1px 3px #000000;
+	box-shadow: 1px 1px 3px #000000;
+	padding-left:10px;
+	padding-right:10px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 </style>
