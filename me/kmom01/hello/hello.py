@@ -21,6 +21,3 @@ print("Just saying Hello World")
 # Assign the string Hello World to a variable and print it out
 str1 = "Hello World in a variable"
 print(str1)
-
-# Testing some own phrases
-print("My own phrase: Hey!/n")

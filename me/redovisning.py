@@ -35,8 +35,4 @@ Det gick bra att komma igång med kursmomentet. Det var lite ovant, men smidigt,
 
 Vilken del av kursmaterialet (böcker, artiklar, videor, etc) uppskattade du mest?
 Jag tror nog att jag gillade alla videoklipp mest. Gillar nog att höra samt att se kodexemplen istället för att bara läsa i en bok. Böckerna var ändå bra, gillade framförallt python for informatics då det var relativt lättläst och på så vis blev det roligt att läsa igenom kapitlerna för momentet. Med allt kursmaterial ihop blev man väl förberedd för guiderna och uppgifterna.
-
-
-
-
 """)
