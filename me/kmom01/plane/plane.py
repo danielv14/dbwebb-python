@@ -22,8 +22,7 @@ Fahrenheit = 9.0/5.0 * Celsius + 32
 #Print it out
 print("Höjden är:", feet, "feet \n", "Hastigheten är:", miles, "mph \n", "Temperaturen är:", Fahrenheit, "F\n")
 		
-#print("Hastigheten är:", miles, "mph")
-#print("Temperaturen är:", Fahrenheit, "F")
+
 
 
 

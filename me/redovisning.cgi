@@ -47,6 +47,22 @@ div.wrapper {
 <title>Min redovisnings-sida</title>
 <div class="wrapper">
 <h1>Mina redovisningar</h1>
+<h2>Kmom02</h2>
+<h3>Allmänt</h3>
+<p>Då var det andra momentet avklarat. Överlag gick det bra och de störta problemen jag hade var att bråka med pylint. Då jag hade följt med Chucks videos som låg under läshänvisningar och skrivit ned alla exempel i en testfil hade jag en del att stödja mig på och återanvända när det var dags att göra uppgiften. Det var väldigt skönt.</p>
+<p>Tycker det var bra att lab1 och marvin var uppdelade i mindre deluppgifter. Detta gjorde att det kändes lättare att ta sig an dem då man kunde beta av en deluppgift i taget.</p>
+<h3>Hur känns syntaxen i Python? Är det enkelt att se programmets struktur och vad den gör?</h3>
+<p>Syntaxen är väldigt lättläst egentligen och det går bra (än så länge) att enkelt se vad koden gör. Det är även väldigt bekvämt att skriva python kod och jag börjar avvänja mig något med att avsluta varje kodsnutt med ';' och dylikt.   <br/>
+Däremot har min hjärna fått för sig att det ska vara ett mellanslag efter print. Detta gillar såklart inte pylint. Antingen gör jag det omedvetet eller så är det min texteditor som vill göra det lite svårare för mig. Kanske har något plugin installerat till Sumblime Text som spökar. Men förmodligen är det jag som inte riktigt vant mig vid syntaxen än.</p>
+<h3>Hur går det med valideringen av uppgifterna? Är du överens med pylint om eventuella felmeddelanden vid valideringen?</h3>
+<p>Valideringen är väldigt frustrerande än så länge. Visst, den hjälper till så att man lär sig "korrekt" syntax men det är svårt att frångå frustration när programmet fungerar som det ska men pylint är en surpuppa och klagar ändå. När jag trodde att jag var klar med hela uppgiften klagade pylint på marvin övning 9 och jag vart verkligen inte klok på felet. Rättade till det genom att skriva om koden totalt och använda ett annat tillvägagångssätt.  <br/>
+Hade några gånger problem med 'outer scope' i lab1 uppgiften som jag fick lösa genom att ändra lite variabelnamn. Men det gick väldigt enkelt att rätta till</p>
+<h3>Hur gick det att utföra uppgifterna, var de enkla eller svåra?</h3>
+<p>Uppgifterna rullade på bra och det var som sagt skönt att jag redan hade en del kod att stödja mig av tack vare att jag skrev upp alla exempel från Chucks videos. Det som egentligen tog mest tid i denna uppgift var att rätta till problem som pylint klagade på.   <br/>
+När jag provkörde marvin då jag kände att jag var klar med alla uppgifter upptäckte jag att marvin inte riktigt gjorde som han skulle när det gällde att omvandla minuter. Jag provade att mata in 50 minuter och marvin påstod att det hade gått en timme. Min kod fungerade som så att den rundande upp och jag skrev om koden med math.floor.</p>
+
+<hr>
+
 <h2>Kmom01</h2>
 
 <h3>Allmänt</h3>

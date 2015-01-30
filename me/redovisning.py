@@ -34,5 +34,5 @@ Gick det bra att komma i gång med kursmomentet, var det lagom, för litet, för
 Det gick bra att komma igång med kursmomentet. Det var lite ovant, men smidigt, att lägga upp filer på studentservern direkt i terminalen. Annars har jag använt mig av antingen FileZilla eller Transmit för att göra det. Så det var ett nytt inslag. Det kändes lagom med uppgiften då det kan vara lite knepigt att få till utvecklingsmiljön och lite sådant som tar tid. Då jag sedan tidigare använt mig av Git och GitHub var det inga svårigheter att klona python-repot
 
 Vilken del av kursmaterialet (böcker, artiklar, videor, etc) uppskattade du mest?
-Jag tror nog att jag gillade alla videoklipp mest. Gillar nog att höra samt att se kodexemplen istället för att bara läsa i en bok. Böckerna var ändå bra, gillade framförallt python for informatics då det var relativt lättläst och på så vis blev det roligt att läsa igenom kapitlerna för momentet. Med allt kursmaterial ihop blev man väl förberedd för guiderna och uppgifterna.
-""")
+Jag tror nog att jag gillade alla videoklipp mest. Gillar nog att höra samt att se kodexemplen istället för att bara läsa i en bok. Böckerna var ändå bra, gillade framförallt python for informatics då det var relativt lättläst och på så vis blev det roligt att läsa igenom kapitlerna för momentet. Med allt kursmaterial ihop blev man väl förberedd för guiderna och uppgifterna.\n
+\n""")
