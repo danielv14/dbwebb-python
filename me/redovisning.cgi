@@ -47,6 +47,22 @@ div.wrapper {
 <title>Min redovisnings-sida</title>
 <div class="wrapper">
 <h1>Mina redovisningar</h1>
+<h3>Allmänt</h3>
+<p>Då var det tredje momentet klart och det har väl egentligen gått rätt hackigt måste jag säga. Överlag gick det väl egentligen bra men det var framförallt två deluppgifter som tog upp mest tid för mig och det var lab2 övning 2.6 och marvins tredje uppgift.</p>
+<h3>Har du programmerat med filhantering tidigare, känns det lätt eller svårt?</h3>
+<p>Har tidigare programmerat med databaser endast och det här sättet är för mig nytt att arbeta med filhantering.</p>
+<h3>Vad tycker du om video som läromedel, tycker du att de tillför något som läromedel?</h3>
+<p>Jag gillar videoklippen. Jag gillar när både öron och ögon tar in intryck och lärdom. Videoserien som bygger på en av kursböckerna gör att jag hänger med och skriver ned alla exempel som tas upp och dessa små program har jag stor nytta av när det är dags att jobba igenom uppgifterna. Fingrarna skriva lite extra kod på detta vis villket jag tycker är bra.</p>
+<h3>Du har gjort din första modul i Python, känns strukturen bra?</h3>
+<p>Det känns bra, jag gillar uppdelningen så slipper man plottriga program med alldeles för många kodrader.</p>
+<h3>Vad tyckte du om de olika uppgifterna? Hur tänkte du när du utförde dem? Var de utmanande eller lätta?</h3>
+<p>Överlag var uppgifterna relativt lätta med några tyngre delar för min del.</p>
+<p>Jag satt fast väldigt länge på lab 2 övning 2.6 och tillslut lade jag den åt sidan för att jobba med marvin istället för att återgå till labben när och om jag blev klar med marvin. Uppgiften med marvin är överlag roligare då marvin har ett mindre repetativt upplägg på något vis, marvin har lite roligare dynamik också. Labben blir gärna repetativ och lite tråkig med allt (nyttigt) tragglande.</p>
+<p>Fastnade redan på uppgift 1 på marvin och det tog ett tag innan jag (efter forumläsning) hittade till exemplet som man skulle bygga om marvin efter. Därefter var allting lugnt tills uppgift 3. På något sätt hade jag glömt bort att det klart och tydligt stod i uppgiftsbeskrivningen att det fanns ett väldigt bra exempel på hur uppgiften kunde lösas. Satt fast i flera timmar och det var tack vare lite grävande på forumet jag insåg att det faktiskt fanns ett exempel på hur uppgiften skulle lösas. Mycket tid hade kunant sparas om jag läst uppgiftsbeskrivningen en gång till.</p>
+<p>Därefter sov jag på saken och försökter igen med lab2 övning 2.6. Det var inte förrän jag verkligen bröt ner uppgiften i molekyler och använde print som guidning på hur jag skulle gå vidare som jag löste den. Det är väl den största lärdom jag tar med mig, bryt ned i mindre bitar och använd print smart.</p>
+
+<hr>
+
 <h2>Kmom02</h2>
 <h3>Allmänt</h3>
 <p>Då var det andra momentet avklarat. Överlag gick det bra och de störta problemen jag hade var att bråka med pylint. Då jag hade följt med Chucks videos som låg under läshänvisningar och skrivit ned alla exempel i en testfil hade jag en del att stödja mig på och återanvända när det var dags att göra uppgiften. Det var väldigt skönt.</p>

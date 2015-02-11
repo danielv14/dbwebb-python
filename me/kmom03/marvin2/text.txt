@@ -1,0 +1,1 @@
+Right now: {date} Robo is {mood} because Robo has bought {nummer1} apples with {nummer2}% reduced price!
