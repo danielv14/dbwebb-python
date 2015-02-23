@@ -47,6 +47,23 @@ div.wrapper {
 <title>Min redovisnings-sida</title>
 <div class="wrapper">
 <h1>Mina redovisningar</h1>
+
+<h2>Kmom04</h2>
+<h3>Allmänt</h3>
+<p>Då var det fjärde momentet klart. På det stora hela har det gått bra men självfallet fastnade jag lite här och där i uppgifterna.</p>
+<h3>Var det svårt att bekanta sig med datastrukturen för listor eller flöt det på bra?</h3>
+<p>Då syntaxen i Python är relativt lättläst var det inga svårigheter att bli bekant med listor. Listor har ju redan tagits upp litegrann så det var familjärt</p>
+<h3>Hur du jobbat med listor eller arrayer, i andra programmeringsspråk - kan du isåfall jämföra Python listor mot andra programmeringsspråk?</h3>
+<p>Har tidigare stött på listor både i PHP och JavaScript och Pythons "enkelhet" gör att jag tycker att pythons sätt att hantera listor är de enklare sättet. Python hanterar listor som så mycket annat på ett mer lättläst sätt vilket gör att det blir lättare att hänga med i hantering av listor, likväl som andra saker.</p>
+<h3>Hur gick det att utföra uppgifterna, vilken tog mest tid och vilken var mest lärorik när det gäller listor?</h3>
+<p>Labben var väl den lättaste uppgiften av de som ingick i momentet och jag kan inte påstå att jag hade några större svårigheter att jobba igenom den. Kanske fastnade någonstans men tog mig snabbt förbi det genom att konsultera Google så att säga. Första uppgiften med Marvin var inte heller direkt svår. Att den uppgiften inte var speciellt komplex gjorde ändå att jag tycker den var väldigt lärorik.</p>
+<p>Andra uppgiften med Marvin var den som tog mest tid för mig att klara av. De första kommandona, lista och visa var inte speciellt svåra att få till. Att låta Marvin plocka upp saker var snäppet svårare och när det gällde att låta Marvin slänga saker stötte jag på stora problem. Satt fast på den funktionen väldigt länge (nästan en hel dag tror jag) och vart väldigt frustrerad. Tillslut gav jag upp den typ av lösning jag ville få till och löste det på ett enklare sätt. Jag kan inte påstå att jag löste det på ett speciellt "snyggt" sätt men funktionen är i alla fall på plats.</p>
+<p>När jag gjorde båda Marvin-uppgifterna så provade jag först att bryta loss det som skulle göras från själva marvinprogrammet. När jag sedan löst uppgifterna flyttade jag över koden och modifierade den för att passa "marvin-miljön".
+Den mest lärorika uppgiften var nog labben då den med hjälp av många mindre uppgifter tog upp mycket om listhantering. Förvisso var Marvin uppgifterna väldigt bra och lärorika också för att de var något mer komplexa och läste från filer.</p>
+
+<hr>
+
+<h2>Kmom03</h3>
 <h3>Allmänt</h3>
 <p>Då var det tredje momentet klart och det har väl egentligen gått rätt hackigt måste jag säga. Överlag gick det väl egentligen bra men det var framförallt två deluppgifter som tog upp mest tid för mig och det var lab2 övning 2.6 och marvins tredje uppgift.</p>
 <h3>Har du programmerat med filhantering tidigare, känns det lätt eller svårt?</h3>

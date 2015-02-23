@@ -465,7 +465,7 @@ summering = 0
 for line in file:
     line = line.strip()
     number = line[-1:]
-    if (number.isdigit() and int(number) % 2 == 0): 
+    if number.isdigit() and int(number) % 2 == 0: 
         summering = summering + int(number)
 
 

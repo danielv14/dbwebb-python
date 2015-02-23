@@ -13,6 +13,13 @@ def main():
     while True:
         marvin.menu()
         choice = input("--> ")
+        keyterm = 'citat' #Get marvin to quote something
+        choicelist = 'visa'
+        choicenumber = 'antal'
+        choiceplocka = 'plocka'
+        choicekasta = 'kasta'
+        words = choice.split()
+
 
         if choice == "q":
             print("Bye, bye - and welcome back anytime!")
@@ -53,6 +60,21 @@ def main():
 
         elif choice == 'throw':
             marvin.throwword()
+
+        elif keyterm in words:
+            marvin.randomquote()
+
+        elif choicelist in words:
+            marvin.visaallt()
+
+        elif choicenumber in words:
+            marvin.listallnumber()
+
+        elif choiceplocka in words:
+            marvin.plockaupp()
+
+        elif choicekasta in words:
+            marvin.removeitem()
         
         else:
             print("That is not a valid choice. You can only choose from the menu.")          
@@ -62,4 +84,3 @@ def main():
 if __name__ == "__main__":
     print(main.__doc__)
     main()
-    

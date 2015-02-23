@@ -1,0 +1,114 @@
+{
+    "details":  "Generated for dave14 at 2015-02-19 14:44:43.",
+    "key":      "9e44f39d35d3e78f6ea5b78c7e03a9dc",
+    "answers":  {
+        		"1.1":		[
+    "guitar",
+    "butterfly",
+    "wall",
+    "flute"
+],
+		"1.2":		[
+    "wasp",
+    "hotdog",
+    "pirate",
+    "fly",
+    "butterfly",
+    "bumblebee",
+    "mosquito"
+],
+		"1.3":		[
+    "wasp",
+    "fly",
+    "cord",
+    "bumblebee",
+    "mosquito"
+],
+		"1.4":		[
+    "bobcat",
+    "cougar",
+    "lion",
+    "ozelot",
+    "tiger"
+],
+		"1.5":		[
+    "tiger",
+    "ozelot",
+    "lion",
+    "cougar",
+    "bobcat"
+],
+		"1.6":		[
+    "fly",
+    "mosquito"
+],
+		"1.7":		[
+    "wasp",
+    "fly",
+    "butterfly",
+    "bumblebee"
+],
+		"2.1":		645,
+		"2.2":		34.6,
+		"2.3":		7,
+		"2.4":		"The rain is pouring",
+		"2.5":		"For",
+		"2.6":		[
+    "tree",
+    "freezer",
+    "fridge",
+    "water",
+    "sky"
+],
+		"2.7":		[
+    "tree",
+    "stone",
+    "grass",
+    "freezer",
+    "fridge"
+],
+		"2.8":		[
+    "tree",
+    "stone",
+    "grass",
+    "freezer",
+    "fridge",
+    "water",
+    "sky"
+],
+		"2.9":		[
+    "horse",
+    "cow",
+    "cat",
+    "dog"
+],
+		"2.10":		[
+    "pig",
+    "cat",
+    "dog"
+],
+		"2.11":		false,
+		"2.12":		true,
+		"2.13":		[
+    "x",
+    "b",
+    "a",
+    "e",
+    "d"
+],
+		"3.1":		[
+    70,
+    120,
+    230,
+    360,
+    5670
+],
+		"3.2":		[
+    72,
+    50,
+    44,
+    20,
+    2
+]
+    }
+}

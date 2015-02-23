@@ -241,4 +241,113 @@ def throwword():
     random.shuffle(shuffled)
     shuffled = ''.join(shuffled)
     print('Working my magic and returning: ' + shuffled)
-    
+
+def randomquote():
+    """
+    Give a random quote from quotes.txt
+    """
+    from random import randint
+    choosequote = randint(1, 10)
+    fhand = open('quotes.txt')
+    lines = fhand.readlines()
+    print(lines[choosequote])
+
+
+def visaallt():
+    """
+    List everything in inventory
+    """
+    fhand = open('inventory.txt')
+    alltihopa = fhand.readlines()
+    listallt = list(alltihopa)
+    print('Marvin has in his inventory: ', listallt)
+
+def listallnumber():
+    """
+    how many things does Robo has? returns integer
+    """
+    fhand = open('inventory.txt')
+    alltihopa = fhand.readlines()
+    items = alltihopa
+    new_items = []
+    for item in items:
+        new_items.extend(item.split(','))
+        print('Robo has', len(new_items), 'things in his inventory')
+        fhand.close()
+
+def plockaupp():
+    """
+    add stuff to robos inventory
+    """
+    fhand = open('inventory.txt', 'a')
+    fhand2 = open('inventory.txt')
+    alltihopa = fhand2.readlines()
+    items = alltihopa
+    new_items = []
+    for item in items:
+        new_items.extend(item.split(','))
+    if len(new_items) <= 6:   
+        addthing = input('What to add to the inventory? ')
+        fhand.write(',' + addthing)
+        print(addthing, ' added!')
+
+    else:
+        print('Cannot add anymore stuff. Please drop something')
+
+def removeitem():
+    """
+    remove stuff
+    """
+    fhand = open('inventory.txt', 'r')
+    alltihopa = fhand.readlines()
+    fhand.close()
+    fhand = open('inventory.txt', 'w')
+    items = alltihopa
+    new_items = []
+    for item in items:
+        new_items.extend(item.split(','))
+        print(len(new_items), 'things in bag')
+        print(new_items)
+        maxnumber = len(new_items) - 1
+        print('Remove something with index 0 through', maxnumber)
+        chooseremove = int(input('What to remove? '))
+        del new_items[chooseremove]
+        fhand3 = open('inventory.txt', 'w')
+        s1 = ','.join(new_items)
+        fhand3.write(s1)
+        print('Item removed')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
