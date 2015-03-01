@@ -48,6 +48,24 @@ div.wrapper {
 <div class="wrapper">
 <h1>Mina redovisningar</h1>
 
+<h2>Kmom05</h2>
+<h3>Allmänt</h3>
+<p>Då var det femte momentet kvar och för mig var detta moment helt klart det svåraste hittils. Förvisso kanske det ska bli svårare och svårare för varje moment men jag satt i alla fall fast väldigt länge med detta momentet.</p>
+<h3>Hur kändes det med datastrukturerna dictionaries och tupler? Har du sett något liknande förut?</h3>
+<p>Dictionaries var lite svårt att greppa först tack vare att indexeringen är väldigt annorlunda i dictionaries samt att när man printar ut en dict kan ordningen bli lite hur som helst. Tuples var lite enklare att greppa även om labben var relativt kort med just tuples vilket gjorde att potentialen med tuples inte riktigt kom fram helt, i alla fall för mig</p>
+<h3>Kändes det som du fick ordning på listor, dictionaries och tupler? När man ska använda respektive och hur de kan användas?</h3>
+<p>När jag hade jobbat igenom labben kände jag mig som en mästare på dictionaries, tupler och listor men den känslan byttes snart ut mot osäkerhet när jag började arbeta med käre Marvin. Jag fick gå tillbaka till litteraturen en gång till för att verkligen försöka få in för- och nackdelarna med respektive tupler och dictionaries. Styrkorna och svagheterna sitter inte än till 100% men efter detta moment är jag i alla fall på god väg.</p>
+<h3>Använde du något av listor, dictionaries eller tupler när du gjorde uppgifterna, på vilket sätt?</h3>
+<p>I Marvinuppgiften var det främst dictionaries och listor som användes. En dictionary håller koll på orden samt hur många gånger det används. Dessa värden flyttas över i en lista och sorteras och förkortas med slice.</p>
+<h3>Hur gick det att utföra uppgifterna, vilken tog mest tid och vilken var mest lärorik?</h3>
+<p>Labben flöt på väldigt bra och den var inte heller speciellt lång eller svår. Förvisso fastnade jag på uppgift 1.8-1.10 men med hjälp av forumet kunde jag ta mig förbi de problem jag hade stött på. Tuplesövningarna gick bra, dock fastnade jag lite på 2.4 tack vare alla konvertering hit och dit mellan listor, tupler och strängar. Vart förvånad när jag validerade labben och det på första försöket gick igenom validatorn smärtfritt.     <br/>
+Marvin var en helt annan historia. Uppgift 4 och 5 hade jag enorma problem med av någon anledning. Först krånglade jag till det i onödan med onödigt mycket kod. Tillslut insåg jag att den lösningen inte skulle fungera och fick börja om på nytt. Sedan försökte jag följa övningsexemplerna i litteraturnen med en funktion för varje deluppgift men det hela vart bara väldigt rörigt och jag skrotade den koden också. Därefter kom jag äntligen på rätt väg efter att ha vänt mig till forumet och jag kom äntligen vidare i uppgiften.    <br/>
+Mest lärorik måste nog ändå Marvin ha varit då den uppgiften är lite mer komplex även om labbens mindre deluppgifter är enklare att hänga med i och förstå.</p>
+<h3>Gjorde du någon av extrauppgifterna?</h3>
+<p>Det gjorde jag tyvärr inte, då jag satt fast så länge med Marvin kände jag att tiden inte var på min sida.</p>
+
+<hr>
+
 <h2>Kmom04</h2>
 <h3>Allmänt</h3>
 <p>Då var det fjärde momentet klart. På det stora hela har det gått bra men självfallet fastnade jag lite här och där i uppgifterna.</p>

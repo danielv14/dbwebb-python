@@ -8,6 +8,8 @@ You should add functinoality to Marvin.
 
 """
 import string
+import collections
+from decimal import Decimal
 
 def meImage():
     """
@@ -235,10 +237,10 @@ def throwword():
     Throwing around a word
     """
     import random
-    string = input("Enter a word for randomizing magic: ")
+    stringen = input("Enter a word for randomizing magic: ")
     #randomizeword = random.sample(string, len(string))
     #print (randomizeword)
-    shuffled = list(string)
+    shuffled = list(stringen)
     random.shuffle(shuffled)
     shuffled = ''.join(shuffled)
     print('Working my magic and returning: ' + shuffled)
@@ -326,13 +328,13 @@ def kmom05():
     fname = input("Enter the name of the text-file you wish to open: ")
     try:
         fhand = open(fname)
-    except:
-        print(fname, ", not valid file name. Default file opens.")
+    except IOError:
+        print(fname, " not a valid file name. Default file opens.")
         fhand = open("alice-ch1.txt")
-    try:
-        fhand_cw = open("common-words.txt")
-    except:
-        print("common-words.txt not found.")
+    
+    fhand_common = open('common-words.txt')
+    fhand_words = open('words.txt')
+    
 
 
     # Count total words    
@@ -343,12 +345,13 @@ def kmom05():
         exclude = set(string.punctuation)
         line2 = ''.join(ch for ch in line if ch not in exclude)
         words = line2.split()
-        for word in words:
+        for word10 in words:
             count_total_words += 1
-            if word not in counts:
-                counts[word] = 1
+            if word10 not in counts:
+                counts[word10] = 1
             else:
-                counts[word] += 1
+                counts[word10] += 1
+    
     
     # Most common word (unsorted)
     lst = list()
@@ -359,73 +362,63 @@ def kmom05():
     for key, val in lst[:7]:
         most_common_unchecked.append((key, val))
 
-    
+    # Most common words, checked with common-words.txt
     lst2 = list()
-    woMostCommon = list()
-
-    # Här sätter du varje rad(ord) i common_words.txt (antar jag?) till 'line'
-    for line in fhand_cw:
-
-        # Här använder du inte 'line', utan 'word' som jag inte vet vad är,
-        # den är inte definierad i den här kodbiten, jag misstänker att det
-        # är 'line' du vill använda här egentligen
-        if line.strip('\n') in counts.keys():
-           
-            # Får du inte det resultatet du letar efter, testa att använda print()
-            # för att skriva ut värdet på variablerna i fråga
-            del counts[line.strip('\n' + string.punctuation + string.whitespace)]
+    most_common_checked = list()
+    for word25 in fhand_common:
+        if word25.strip('\n') in counts.keys():
+            del counts[word25.strip('\n')]
     for key, val in counts.items():
         lst2.append((val, key))
     lst2.sort(reverse=True)
     for key, val in lst2[:7]:
-        woMostCommon.append((key, val))
+        most_common_checked.append((key, val))
 
-
-    
+    #Most common words, checked with common and words
+    list3 = list()
+    spelled_right = list()
+    for word2 in fhand_words:
+        if word2.strip('\n') in  counts.keys():
+            #print('Här har vi lika ord')
+            counts.pop(word2.strip('\n'), None)
+    for key, val in counts.items():
+        list3.append((val, key))
+    list3.sort(reverse=True)
+    for key, val in list3[:7]:
+        spelled_right.append((key, val))
 
 
     #Count letter frequency
-    #print(type(counts))
+    letter_string = ""
+    for key in counts.keys():
+        letter_string = letter_string + key
+    
+    # Get length of the string for caluclating percentage later on
+    string_length = len(letter_string)
 
-
+    # Create a new string that is sorted by the 7 most common letter
+    sorted_string = collections.Counter(letter_string).most_common(7)
+    
     #print total wordcount
     print("\nTotal number of words are: " + str(count_total_words) + '\n')
     #print most common words not checked with common-word
-    print("The 7 most common (not checked with common words) words are: " + str(most_common_unchecked) + '\n')
+    print("The 7 most common (not checked with common words) words are: ")
+    for freq1, word1 in most_common_unchecked[0:7]:
+        print(freq1, '\t', word1)
+    print('\n')
     #Print the most common words (checked with common-word)
-    print("The 7 most common words, regular words excepted, are: " + str(woMostCommon))    
+    print("The 7 most common words, regular words excepted, are: ")    
+    for freq2, word2 in most_common_checked[0:7]:
+        print(freq2, '\t', word2)
+    print('\n')
+    print('The 7 most common words that are spelled right and not common are: ')
+    for freq3, word3 in spelled_right[0:7]:
+        print(freq3, '\t', word3)
+    print('\n')
+    print('The 7 most frequent letters and their percentage: ')
+    for word90, freq in sorted_string:
+        float(freq)
+        percentage = Decimal(100 * (freq / string_length))
+        print(freq, '\t', word90, '\t', round(percentage, 2), '%')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    print('counts är: ', type(counts))
