@@ -48,6 +48,27 @@ div.wrapper {
 <div class="wrapper">
 <h1>Mina redovisningar</h1>
 
+<h2>Kmom06</h2>
+<h3>Allmänt</h3>
+<p>Då var förhoppningsvis det sista momentet innan projektet avklarat, om jag tolkat alla deluppgifter på ett någorlunda rätt sätt.   <br/>
+När jag började med själva uppgiften tänkte jag att den såg extremt omfattande och svår ut och kände att det aldrig skulle gå att genomföra uppgiften. När jag sedan sovit på saken efter att ha försökt förstå mig på mynameis.py och guiden kändes det något bättre att börja ta tag i uppgiften.</p>
+<h3>Har du jobbat med liknande tekniker innan(JSON, HTTP, SQLite osv osv), eller var det nytt?</h3>
+<p>Då jag läst webbutveckling innan var det inte första gången jag kom i kontakt med mycket av det denna uppgift tog upp.</p>
+<h3>Känns det bra att jobba på kommandoraden, ser du ett användningsområde för den typen av Python-program?</h3>
+<p>Det var väldigt ovant att jobba på det viset i början, måste jag säga. Men när jag vart lite mer van med arbetssättet insåg jag hur snabbt och smidigt man kunde använda kommandoraden för att få ett pythonprogram att utföra uppgifter. Att man på förhand vet vad man vill få ut av programmet och genom att exempelvis lägga till <code>--output</code> i kommandoraden för att säga åt programmet att göra en viss sak.   <br/>
+Har egetligen lite svårt att se ett specifikt användningsområde för denna typen av Python-program mer än att det kan spara mycket tid om man på förhand vet vad man vill göra med programmet</p>
+<h3>Hur gick det att utföra uppgifterna, vilken tog mest tid och vilken var mest lärorik?</h3>
+<p>När jag först läste igenom uppgiften och kollade igenom guiden förstod jag inte hur jag skulle klara av uppgiften. Det svåraste för mig var nog just att förstå hur mynameis.py var strukturerat och hur jag skulle kunna bygga vidare på det. Uppgift 9 var nog den svåraste, tyckte att den var omfattande även om det vart enklare att söka efter h2-element efter jag lyckats söka efter h1-element osv.</p>
+<p>När jag började med själva uppgiften kopierade jag helt enkelt över mynameis.py från exempelmappen till marvin5 och byggde vidare på programmet med mynameis.py som filnamn. När jag sedan var klar med uppgiften försökte jag byta namn på filen till marvin-cli.py och därefter gick det inte att använda programmet. Fick error om Permission Denied och det fungerade inte heller när jag skapade en tom fil som hette marvin-cli.py och flyttade över koden från min mynameis.py som innehöll koden för uppgiften. Jag löste det genom att följa guiden där man skapar en symbolisk länk och jag döpte min länk till marvin-cli. Så för att använda mitt progam skriver man exempelvis <code>marvin-cli --help</code> och då anropar man den symboliska länken som bygger på min version av mynameis.py. Det finns alltså ingen marvin-cli.py i min mapp för kursmomentet.</p>
+<p>Annars så fungerar väl kommandorna ungefär som det är tänkt, om jag tolkat uppgiften korrekt.  <br/>
+<code>>marvin-cli --output --get http://dbwebb.se</code laddar exempelvis ner html-koden för dbwebb.se och sparar den i en bestämd fil.  <br/>
+<code>marvin-cli --input --quote</code> laddar citat från en fil.</p>
+<h3>Var uppgiften i tuffaste laget, villken del hade du valt bort om du hade haft det valet?</h3>
+<p>Uppgiften var helt klar svår, något annat kan jag inte säga. Men när jag väl förstod "flödet" i programmet vart det lättare att beta av de olika deluppgifterna.   <br/>
+Svårt att säga vilken jag hade velat ta bort. Kanske inte ha så många olika deluppgifter i momentet. Att SQLite har gjorts som en extrauppgift tror jag var väldigt bra då det kan vara tufft att sätta sig in i <em>ännu</em> en grej om mycket av detta kursmoment redan är nytt.</p>
+
+<hr>
+
 <h2>Kmom05</h2>
 <h3>Allmänt</h3>
 <p>Då var det femte momentet kvar och för mig var detta moment helt klart det svåraste hittils. Förvisso kanske det ska bli svårare och svårare för varje moment men jag satt i alla fall fast väldigt länge med detta momentet.</p>
