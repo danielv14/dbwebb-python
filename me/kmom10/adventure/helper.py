@@ -77,7 +77,8 @@ def notebook():
         print("When you're done with the notebook you can type 'done' to put it away.")
         print('The idea is to write down the correct answers from all the rooms to your notebook')
         print('A tip is to write like this:')
-        print("\nRoom 1: your-answer\tThis makes the note easier to read and understand for you as it's organized better.")
+        print("\nRoom 1: your-answer")
+        print("This makes the note easier to read and understand for you as it's organized better.")
         notebook()
     
     else:
@@ -89,14 +90,14 @@ def startscreen_art():
     """
     Ascii art for start screen
     """
-    start_art = '''\
-          __  __               _                         _                                    
-         |  \/  |  ___  __ __ (_)  ___     __ _   _  _  (_)  ___    __ _   __ _   _ __    ___ 
-         | |\/| | / _ \ \ V / | | / -_)   / _` | | || | | | |_ /   / _` | / _` | | '  \  / -_)
-         |_|  |_| \___/  \_/  |_| \___|   \__, |  \_,_| |_| /__|   \__, | \__,_| |_|_|_| \___|
-                                             |_|                   |___/                      
-    '''
-    print(start_art)                    
+    return r"""
+      __  __         _                 _    
+     |  \/  |_____ _(_)___   __ _ _  _(_)___
+     | |\/| / _ \ V / / -_) / _` | || | |_ /
+     |_|  |_\___/\_/|_\___| \__, |\_,_|_/__|
+                               |_|          
+    """
+                   
 
 def congratulations():
     """
