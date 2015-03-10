@@ -66,9 +66,13 @@ def notebook():
         print("You put the notebook back in your pocket and can now interact with the room again.")
 
     elif notebook_choice == 'delete':
-        open('notebook.txt', 'w')
-        print('You erase all the content from your notebook.')
-        notebook()
+        try:
+            open('notebook.txt', 'w')
+            print('The notebook has been reset.')
+            notebook()
+        except IOError:
+            print("Can't find the file 'notebook.txt")
+            notebook()
 
     elif notebook_choice == 'help':
         print('You can either read your notebook or write new lines to it.')

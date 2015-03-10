@@ -722,6 +722,12 @@ def finish():
     helper.congratulations()
     print("\nCongratulations! You've won the game!")
     print('\nBased on how many clues it got you to finish room 7 your reward is:', config.reward * 1000, 'points')
+    try:
+        open('notebook.txt', 'w')
+        print('The notebook has been reset.')
+    except IOError:
+        print("Can't find the file 'notebook.txt")
+    
 
 
 
