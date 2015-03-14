@@ -24,9 +24,9 @@ import config
 # Argparsing 
 parser = argparse.ArgumentParser()
 parser.add_argument("-v", "--version", help="Display program version.", action="store_true")
-parser.add_argument("-i", "--info", help="Description of the game", action="store_true")
-parser.add_argument("-a", "--about", help="Info about the developer", action="store_true")
-parser.add_argument("-c", "--cheat", help="Get cheats for the game", action="store_true")
+parser.add_argument("-i", "--info", help="Description of the game.", action="store_true")
+parser.add_argument("-a", "--about", help="Info about the developer.", action="store_true")
+parser.add_argument("-c", "--cheat", help="Get cheats for the game.", action="store_true")
 args = parser.parse_args()
 if args.version:
     print("Version 0.2 BETA")
@@ -68,15 +68,15 @@ def room1():
         room1()
     elif room1_choice == 'forward':
         if config.question_room1 == 0:
-            print('You cant go forward until you answer the question right')
+            print("You can't go forward until you answer the question right.")
             room1()
         else:
             print(chr(27) + "[2J" + chr(27) + "[;H")
             print(room2.__doc__)
             room2()
     elif room1_choice == 'back':
-        print('If you go back to the main menu all the doors will shut.')
-        print('Still wanna go back? yes? no?')
+        print('You sure you want to go back to the startscreen?')
+        print('Type yes or no.')
         are_you_sure = input('\n>>> ')
         if are_you_sure == 'yes':
             print('You are going back to the main menu.')
@@ -201,7 +201,7 @@ def room2():
         helper.notebook()
         room2()
     else:
-        print('That is not valid input')
+        print('That is not valid input.')
         room2() 
 
 def room3():
@@ -230,7 +230,7 @@ def room3():
         print(room2.__doc__)
         room2()
     elif room3_choice == 'look':
-        print('You look around and see two boxes stacked on eachother. Nothing else')
+        print('You look around and see two boxes stacked on eachother. Nothing else.')
         room3()
     elif room3_choice == 'clue':
         if config.clue_room3 == 0:   
@@ -241,7 +241,7 @@ def room3():
             print('Psst! christopher nolan directed the dark knight trilogy.')
             room3()
     elif room3_choice == 'object':
-        print('You see 2 boxes stacked on eachother in the middle of the small room')
+        print('You see 2 boxes stacked on eachother in the middle of the small room.')
         room3()
     elif room3_choice == 'look boxes':
         print('The first box on the top has a label "Empty" while the second box below has a label "Important".')
@@ -259,18 +259,18 @@ def room3():
             config.note_room3 = 1 #Make the note available.
             room3()
     elif room3_choice == 'kick first box':
-        print('You kick the first box and it hits the floor and slides away a bit')
+        print('You kick the first box and it hits the floor and slides away a bit.')
         config.box1 = 1 # The first box is now moved and the second box is available for open command
         room3()
     elif room3_choice == 'kick second box':
-        print('Really no need to kick the second box around. Try opening it instead')
+        print('Really no need to kick the second box around. Try opening it instead.')
         room3()
     elif room3_choice == 'move first box':
-        print('You move the first box, making the second box openable')
+        print('You move the first box, making the second box openable.')
         config.box1 = 1 #Move first box and make the second box available for interaction
         room3()
     elif room3_choice == 'move second box':
-        print('No need to move around the second box. Try to open it instead')
+        print('No need to move around the second box. Try to open it instead.')
         room3()
     elif room3_choice == 'read note':
         if config.note_room3 == 0: # if you somehow try to read the note before you have interacted with the boxes
@@ -290,10 +290,10 @@ def room3():
         room3()
     elif room3_choice == 'q':
         print(chr(27) + "[2J" + chr(27) + "[;H")
-        print('You have quit the game')
+        print('You have quit the game.')
     elif room3_choice == 'quit':
         print(chr(27) + "[2J" + chr(27) + "[;H")
-        print('You have quit the game')
+        print('You have quit the game.')
     elif room3_choice == 'notebook':
         helper.notebook_text()
         helper.notebook()
@@ -331,7 +331,7 @@ def room4():
         room4()
     elif room4_choice == 'clue':
         if config.clue_room4 == 0:
-            print('Maybe interact with the note somehow.')
+            print('Read the note.')
             room4()
         else:
             print('The answer is "alfred".')
@@ -353,13 +353,13 @@ def room4():
         print('Nothing to kick unless you like to kick around a small note... Focus on what the note says.')
         room4()
     elif room4_choice == 'move note':
-        print('No need to move around the note. Focus on what the note says')
+        print('No need to move around the note. Focus on what the note says.')
         room4()
     elif room4_choice == 'alfred':
-        print("Well aren't you a smart person! You solved the rather simple puzzle.\nAs always: shout your answer")     
+        print("Well aren't you a smart person! You solved the rather simple puzzle.\nAs always: shout your answer.")     
         room4()
     elif room4_choice == 'shout alfred':
-        print('You shout "AAAAAALFREEEEED!" as loud as you can and the door to the next room opens')
+        print('You shout "AAAAAALFREEEEED!" as loud as you can and the door to the next room opens.')
         config.question_room4 = 1
         room4()
     elif room4_choice == 'q':
@@ -414,7 +414,7 @@ def room5():
             print('Look again in the cabinett.')
             room5()
         else:
-            print('Psst! The correct answer is Sean Bean')
+            print('Psst! The correct answer is Sean Bean.')
             room5()
     elif room5_choice == 'object':
         print('The only object you can see is the cabinett in the middle of the room.')
@@ -525,7 +525,7 @@ def room6():
         room6()
     elif room6_choice == 'clue':
         if config.clue_room6 == 0:
-            print('You have to try and jump over to the other side of the room')
+            print('You have to try and jump over to the other side of the room.')
             print('You have a new command to help you jump and that is:\njump')
             room6()
         else:
@@ -566,7 +566,7 @@ def room6():
         print('That is correct. As always: SHOOUUT IT!')
         room6()
     elif room6_choice == 'shout james cameron':
-        print('You shout: JAAAAAMES CAAAAAMEROOOON!! as the door to the next room opens')
+        print('You shout: JAAAAAMES CAAAAAMEROOOON!! as the door to the next room opens.')
         config.question_room6 = 2
         room6()
     elif room6_choice == 'fly':
@@ -727,10 +727,9 @@ def finish():
         print('The notebook has been reset.')
     except IOError:
         print("Can't find the file 'notebook.txt")
+        
+       	
     
-
-
-
 
 def main():
     """

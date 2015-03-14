@@ -7,13 +7,14 @@ def choices():
     description of the choices you can do in a room
     """
     print('\nRobo says that in every room you have som helping commands:\n')
-    print('info)        get a description of the room')
-    print('help)        get a list of available commands')
-    print('forward)     go forward to the next room if its unlocked')
-    print('back)        go back to previous room')
-    print('look)        look around')
-    print('clue)        get a clue to how you complete this room')
-    print('notebook)    Open your notebook where you can write down answers.')
+    print('info)                get a description of the room.')
+    print('help)                get a list of available commands.')
+    print('forward)             go forward to the next room if its unlocked.')
+    print('back)                go back to previous room.')
+    print('look)                look around.')
+    print('clue)                get a clue to how you complete this room.')
+    print('shout <your answer>) shout your answer to open the door to the next room.')
+    print('notebook)            Open your notebook where you can write down answers.')
 
 def object_choices():
     """
@@ -76,13 +77,18 @@ def notebook():
 
     elif notebook_choice == 'help':
         print('You can either read your notebook or write new lines to it.')
-        print("You can also delete all the content from the notebook with 'delete' command.")
+        print("You can also delete all the content from the notebook.")
         print("Be aware as this command erases all the content of the notebook.")
-        print("When you're done with the notebook you can type 'done' to put it away.")
+        print("When you're done with the notebook you can have to put it away to go on with the room..")
         print('The idea is to write down the correct answers from all the rooms to your notebook')
-        print('A tip is to write like this:')
-        print("\nRoom 1: your-answer")
-        print("This makes the note easier to read and understand for you as it's organized better.")
+        print('The Commands are:')
+        print('help)    view this text.')
+        print('read)    read content of the notebook.')
+        print('write)   write something down in the notebook.')
+        print('done)    put the notebook away and continue with the room.')
+        print('\nA tip is to write like this:')
+        print("Room 1: your-answer")
+        print("This makes the note easier to read and understand as it's organized better.")
         notebook()
     
     else:

@@ -20,7 +20,7 @@ from bs4 import BeautifulSoup
 #
 PROGRAM = os.path.basename(sys.argv[0])
 AUTHOR = "Daniel"
-VERSION = "0.1 BETA"
+VERSION = "1.0"
 USAGE = """{program} - Kmom06. By {author}, version {version}.
 
 Usage:
@@ -59,6 +59,7 @@ VERBOSE = False
 OUTPUT = False
 INPUT = False
 JSON = False
+NAME = ""
 
 EXIT_SUCCESS = 0
 EXIT_USAGE = 1
@@ -103,7 +104,6 @@ def quotefunct():
         sys.exit(EXIT_SUCCESS)
 
     # Vad ska hända annars
-    print('Det här ska hända när input INTE är angivet')
     url = "http://dbwebb.se/javascript/lekplats/get-marvin-quotes-using-ajax/quote.php"
     try:
         req = requests.get(url)
@@ -346,7 +346,7 @@ def parseOptions():
 
         opts, args = getopt.getopt(sys.argv[1:], "d:hr:sv", ["ping=", "get=", "title=", "seo=", "output",
                                                              "input", "verbose", "ping-history", "help", "version", 
-                                                             "quit", "json", "silent", "quote"])
+                                                             "json", "silent", "quote"])
 
         for opt, arg in opts:
             if opt in "--ping":
@@ -361,7 +361,7 @@ def parseOptions():
             elif opt in '--title':
                 titlefunct(arg)
 
-            elif opt in "--seo=":
+            elif opt in "--seo":
                 seofunct(arg)
 
             elif opt in "--help":
@@ -393,7 +393,9 @@ def parseOptions():
                 assert False, "Unhandled option"
 
     
-        
+        # Path of logfile passed as argument
+        global NAME
+        NAME = args[0]
 
 
 
