@@ -37,7 +37,7 @@ def notebook_text():
     print('What would you like to do with the notebook?')
     print('You can interact with the notebook with the following commands: read, write and delete.')
     print("When you're done type 'done' to get back to the current room.")
-    print("Type 'help to get some info about how the notebook works.")
+    print("Type 'help' to get some info about how the notebook works.")
 
 
 def notebook():

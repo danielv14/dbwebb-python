@@ -122,7 +122,7 @@ def room2():
     """
     You are now in the 2nd room and after the first room you are feeling confident about finishing the 
     game because of the first simple question Robo gave you.
-    Robo is silent in this room though annd you might have to look around to see what you are suppose to do in here...
+    Robo is silent in this room though and you might have to look around to see what you are suppose to do in here...
     """
     room2_choice = input('\n>>> ')
     if room2_choice == 'help':
@@ -345,6 +345,7 @@ def room4():
     elif room4_choice == 'read note':
         print('The note is very small and reads:')
         print('What is the first name of Batmans butler?')
+        config.clue_room4 = 1
         room4()
     elif room4_choice == 'open note':
         print('Cannot open the note.')
@@ -414,7 +415,7 @@ def room5():
             print('Look again in the cabinett.')
             room5()
         else:
-            print('Psst! The correct answer is Sean Bean.')
+            print('Psst! The correct answer is sean bean.')
             room5()
     elif room5_choice == 'object':
         print('The only object you can see is the cabinett in the middle of the room.')
@@ -621,23 +622,23 @@ def room7():
             print("Doesn't seem to be much to do in this room except to read the note...")
             room7()
         elif config.clue_room7 == 1:
-            print("Would the genre of the movie help? It's a sci-fi movie. ")
+            print("Clue 1: Would the genre of the movie help? It's a sci-fi movie. ")
             config.clue_room7 += 1
             room7()
         elif config.clue_room7 == 2:
             print('Another clue to help you figure out the movie.')
-            print('Harrison Ford is in both this movie and the movie from room 2.')
+            print('Clue 2:Harrison Ford stars in both this movie and the movie from room 2.')
             print('Although it is not Ford who delivers the quote.')
             config.clue_room7 += 1
             config.reward = 4
             room7()
         elif config.clue_room7 == 3:
-            print('Rutger Hauer is the actor whose character delivers the quote.')
+            print('Clue 3: Rutger Hauer is the actor whose character delivers the quote.')
             config.clue_room7 += 1
             config.reward = 3
             room7()
         elif config.clue_room7 == 4:
-            print("Hauer's character first name is Roy and his last name is very similar to 'Betty'.")
+            print("Clue 4: Hauer's character first name is Roy and his last name is very similar to 'Betty'.")
             config.clue_room7 += 1
             config.reward = 2
             room7()
@@ -658,7 +659,7 @@ def room7():
         print("There's just one last question standing in your way of winning the game. Do you think you'll make it?")
         print("If you thought the last question would be hard, you're right.")
         print("I saved the hardest one for last of course. ")
-        print("I am willing to give you 5 clues before giving away the correct answer.")
+        print("I am willing to give you 4 clues before giving away the correct answer.")
         print("You'll be rewarded by how few clues you needed.")
         print("The question is...")
         input("\n(press enter) ")
@@ -691,7 +692,8 @@ def room7():
         print('The floor starts to shake and you suddenly hear a voice:')
         print('So you think you have finished the game now, huh?')
         print('I just need ONE more thing from you and I hope you have been paying attention from the start...')
-        print('Shout the last character from every correct answer in order from the first to the last room!')
+        print('Shout the last character from every correct answer (including the one from this room).')
+        print("Shout the characters in order from the first to the last room!")
         print('\nHmm..you think to yourself. ')
         print('Hopefully you have been written down the answers in your notebook...')
         room7()
@@ -735,6 +737,13 @@ def main():
     """
     main function
     """
+
+    # reset the notebook when you start the game
+    try:
+        open('notebook.txt', 'w')
+    except IOError:
+        print("Can't find the file 'notebook.txt")
+
     print(chr(27) + "[2J" + chr(27) + "[;H")
     print(helper.startscreen_art())
     print(__doc__)
