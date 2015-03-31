@@ -48,6 +48,69 @@ div.wrapper {
 <div class="wrapper">
 <h1>Mina redovisningar</h1>
 
+<h2>Kmom07-10</h2>
+<h3>Inledning</h3>
+<p>Då var förhoppningsvis pythonprojektet klart och jag måste säga att det här var den roligaste biten på hela kursen.  När jag började med spelet hade jag ingen röd tråd eller tanke om vad det skulle handla om. Jag provade mest ideér och det var inte förrän jag hade skapat 3 stycken ”enklare rum” som jag kom på idén om att jag skulle göra ett film quiz spel.
+Jag höll mig till 7-rums exemplet och spelet går ut på att man ska läsa filmrelaterade frågor som står på lappar i de olika rummen. För att ta sig vidare ska man skrika ut det korrekta svaret och dörren till nästa rum öppnas. Det är inte alltid uppenbart vart lapparna finns och ibland måste man öppna, flytta och sparka på andra objekt för att komma åt lappen med rummets filmrelaterade fråga.
+Som vägledning har man utöver ledtrådskommandot roboten Robo som finns vid ens sida genom hela spelet. Tyckte att kommandot för ledtrådar funkade bra och således använde jag mig inte av guiden Robo speciellt mycket utan lite sporadiskt.</p>
+<h3>Krav 1, 2 och 3</h3>
+<p>När jag gjorde mina parametrar använde jag mig inte av getopt utan jag använde mig istället av argparse då det efter en del googlade verkar vara en bättre lösning och nu när jag använt mig lite av båda måste jag hålla med. Det gick mycket smidigare att implementera en lösning med argpase tycker jag. Skriver man exempelvis python3 adventure.py -c får man se tillgängliga fuskkoder och korrekta svar. De parametrar som adventure.py accepterar är:</p>
+<ul>
+<li>-h —help som visar vilka parametrar som finns.</li>
+<li>-v —version som visar spelets version.</li>
+<li>-i —info som visar spelets handling (visar texten från   startskärmen av spelet)</li>
+<li>-a —about som visar info om utvecklaren.</li>
+<li>-c —cheat som visar alla korrekta svaren på frågorna samt en del fuskkoder man kan använda sig av.</li>
+</ul>
+<p>Spelet börjar med en startskärm med en lite tjusig ascii-art title samt lite förklarade text vad spelet går ut på samt lite tips. Bland annat står det på startskärmen att det två första rummen är designade lite som en tutorial där spelaren blir lite mer guidad genom rummen så att spelaren förstår hur spelet spelas. Det står även på startskärmen att spelaren har en anteckningsbok till sitt förfogande och att det är rekommenderat att man skriver ner de korrekta svaren i den för att alla svaren kan komma att behövas under spelets gång. Spelaren kan antingen skriva ’start’ för att starta spelet eller ’q’ / ’quit’ för att avsluta.</p>
+<p>Jag valde att skriva all kod och alla kommandon på engelska då det kändes mer naturligt och de kommandon som accepteras är:</p>
+<ul>
+<li>info - visa information om rummet.</li>
+<li>help - lista alla tillgängliga kommandon, även kommandona för objekten i rummen.</li>
+<li>forward - gå framåt till nästa rum, om det är upplåst.</li>
+<li>back - gå tillbaka till föregående rummet.</li>
+<li>look - spelaren ser sig omkring efter vad som finns i rummet.</li>
+<li>clue - Få ledtrådar om hur rummet klaras av.</li>
+<li>notebook - Ta fram anteckningsboken.</li>
+</ul>
+<p>Objekt interagerar man med genom dessa kommandon:</p>
+<ul>
+<li>object - se alla objekt i rummet.</li>
+<li>look &lt;object-name> - visa lite mer info om ett specifikt objekt.</li>
+<li>open &lt;object-name> - öppna objektet, om möjligt.</li>
+<li>kick &lt;object-name> - sparka på objektet, om det är meningsfullt.</li>
+<li>move &lt;object-name> - Försök flytta objektet, om möjligt eller meningsfullt.</li>
+<li>read note - Läs rummets lapp, om möjligt.</li>
+</ul>
+<p>Väljer man att ta fram anteckningsboken har men dessa kommandon till sitt förfogande:</p>
+<ul>
+<li>read - läs innehållet i anteckningsboken.</li>
+<li>write - anteckna något.</li>
+<li>help - få lite mer hjälp om hur anteckningsboken fungerar. Man får även lite tips om hur man kan skriva i anteckningsboken för att det ska bli bättre organiserat och överskådligt.</li>
+<li>done - stoppa undan anteckningsboken och fortsätta med det nuvarande rummet.</li>
+</ul>
+<p>Vissa rum är svårare än andra medan det i något rum bara krävs att spelaren interagerar med lappen i rummet för att läsa den filmrelaterade frågan. Ibland måste man öppna, flytta eller sparka på objekt för att kunna läsa lappen med rummets fråga.
+Alla 7 rummen är uppdelade i varsina funktioner i adventure.py och det finns även en mainfunktion som fungerar som startskärm.</p>
+<p>All text som anropas när man skriver ’help’ finns i en separat fil, helper.py som anropas från adventure.py. Texterna om möjliga kommandon ligger i separata funktioner, detta för att första rummet inte innehåller interaktion med ett objekt och således behöver man inte i det första rummet veta hur man interagerar med objekt eller hur man läser en lapp. I helper.py återfinns även anteckningsboken som en separat funktion som anropas från adventure.py när man anger kommandot för anteckningsboken.
+Helper.py innehåller även 2 funktioner med  Ascii-art som laddas på startskärmen och när spelet är avklarat.</p>
+<p>För att hålla koll på om ett rum är avklarat, om skåp är öppnade, om lådor är flyttade eller om lappen är tillgänglig använde jag mig först av globala variabler som initierades i min main-funktion där spelet börjar. Variablerna var integers och ändrades beroende på exempelvis om rummets lapp var läst eller ej. Ledtrådarna kan ju självklart inte ge det korrekta svaret så fort man frågar efter en ledtråd utan först får man ledtrådar om vart lappen kan tänkas vara och dylikt. När man väl har läst lappen ändrades en global variabel och ledtråden ändrades till att ge det korrekta svaret. Detta fungerade bra tills jag började validera mitt projekt och då klagade pylint på mitt sätt att använda dessa globala variabler. Jag fick således skrota den idén och efter en stunds googlande fick jag ett tips. Jag flyttade över alla tidigare globala variabler till en separat fil, config.py och importerade dessa istället till adventure.py. Resultatet blev precis som jag hade tänkt mig och pylint klagade inte längre.</p>
+<h3>Krav 4</h3>
+<p>Svårt att avgöra om detta krav är uppfyllt men det var i alla fall den tanken jag hade med spelets anteckningsbok. Innehållet i anteckningsboken sparas i en textfil, notebook.txt. Exempelsekvensen som man kan läsa när man läser om krav fyra ser såklart lite annorlunda ut jämfört med hur jag valt att genomföra kravet. Exempelsekvensen menar att man plockar upp ett objekt från ett rum och kan använda det i det nästa rummet, till exempel en nyckel. Så ser inte flödet ut i mitt spel då det inte är någon ryggsäck man lägger saker i, utan spelaren skriver (förhoppningsvis) bara ner de korrekta svaren för varje rum då startskärmen menar att de korrekta svaren kan behövas i ett av rummen och precis så ligger det till. För att ens kunna klara spelet måste man komma ihåg alla svaren och kombinera dessa på ett visst sätt för att ta sig förbi det sista rummet. Har spelaren bra minne kanske det inte blir speciellt svårt men det är här som anteckningsboken är tänkt att verkligen komma till nytta. Har spelaren då skrivit ner alla det korrekta svaren där är det bara läsa anteckningsboken och väldigt enkelt klara av sista rummet. Lider spelaren av dåligt minne måste man således gå tillbaka till rummen och antingen läsa lapparna igen eller ledtrådarna för att kunna skriva ner de korrekta svaren i anteckningsboken.</p>
+<h3>Om projektet</h3>
+<p>Projektet har på det stora hela gått väldigt bra måste jag säga. Det har väldigt roligt och kändes som ett bra avslut på kursen. Det var mycket roligare att koda adventure.py än att hålla på med labbarna då labbarna gärna kändes väldigt stela och tråkiga.
+Jag var först lite inne på hur man skulle kunna lösa projektet med hjälp av klasser men då kursen inte gått igenom detta såg jag ingen direkt anledning att nyttja python-klasser för att genomföra projektet. Så här i efterhand kan jag tänka att klasser säkert hade underlättat på en rad olika sätt genom arv och dylikt då min kod gärna är lite upprepande.  Men då vi som sagt inte gått igenom klasser och med  KISS-principen (keep it simple, stupid) som motivering valde jag att genomföra projektet på det sätt jag gjort.
+Från början hade jag tänkt att anteckningsboken skulle representeras av en json-dictionary på fil men jag insåg att för anteckningsbokens ändamål räckte det med en vanlig textfil och hederliga, vanliga textrader.</p>
+<p>Jag tycker projektet ligger inom en ett rimligt spann för vad kursen har tagit upp. Då projektet är någorlunda fritt inom vissa ramar kan man anpassa svårighetsgraden på ett bra sätt. Det finns inte endast ett korrekt sätt för att genomföra projektet på utan man kan lösa problem på olika sätt. Förvisso är kanske vissa lösningar smartare än andra men ändå.
+Det är svårt att uppskatta hur mycket tid jag lagt ned på projektet men skulle jag uppskatta så kanske 40-50 timmar. Då från idé till sista punkten på redovisningstexten.</p>
+<h3>Validering</h3>
+<p>Valideringen var lite krånglig då jag först hade alla mina filer utanför dbwebb-mappen och hade således inte tillgång till valideringsverktygen. När jag hade kommit en bra bit med spelet valde jag att flytta över filerna till dbwebb-mappen och såklart hade jag ett drös valideringsfel, det blir ju gärna så när man validerar nästan 1000 rader kod på en gång för första gången. Förutom de problem jag hade med globala variabler som jag skrivit om tidigare hade jag väldigt många rader som var för långa. Det handlade om rader med beskrivande texter om rum och dylikt. Mycket beskrivande text togs bort och delades upp så pylint skulle bli nöjd med sin regel om 120 tecken på en rad eller vad det nu var. När jag läste genom tidigare redovisningar såg jag att pylint inte gillade när filer var längre än 1000 rader och jag var ett tag väldigt nära på att överskrida den gränsen. Detta trots att jag redan hade två filer som avbelastade kodlängden, helper.py och config.py. När jag rensade lite beskrivande text och tog bort nästan allt överflödigt mellanrum (jag gillar när det är lite mer luftigt i koden) lyckades jag trimma ned antalet rader avsevärt.</p>
+<h3>Om kursen</h3>
+<p>Kursen har i det stora hela varit bra. Labbarna var väldigt smart utformade men självrättningen. Tyvärr var väl labbarna i min smak lite för tråkiga. Uppgifterna med Marvin var något bättre. Tyvärr kan jag tycka att svårighetsgraden steg lite väl när det gällde moment 5 och 6.  Framförallt moment 5 hade jag stora svårigheter med och det var de moment jag satt fast på längst. Visserligen måste ju svårighetsgraden öka och uppgifterna bli svårare man jag tyckte det ökade lite väl exponentiellt, om man säger så. I alla fall för mig.
+Pylint har jag även bråkat med en del och till viss del kan jag väl förstå varför pylint används. Utöver error-handling lär den ju en att skriva på ett visst ”korrekt” sätt.
+Personligen gillade jag att det fanns många tillgängliga filmklipp till varje kursmoment men det var väl framför allt ”Python for imformatics” klippen som gav mig något. Jag följde gladeligen med i klippen och skrev ned all exempelkod som jag senare kunde ha som stöd när jag började med momentens uppgifter.
+Då det inte var min första kurs på dbwebb var jag sedan tidigare van att skriva redovisning på tre olika ställen men jag kan förstå att det känns väldigt krångligt när man är ovan. Tycket det är väldigt svårt att sätta betyg men jag landar nog någonstans mellan 6 och 7 i betyg.</p>
+
+<hr>
 <h2>Kmom06</h2>
 <h3>Allmänt</h3>
 <p>Då var förhoppningsvis det sista momentet innan projektet avklarat, om jag tolkat alla deluppgifter på ett någorlunda rätt sätt.   <br/>
